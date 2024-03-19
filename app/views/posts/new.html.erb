@@ -1,0 +1,9 @@
+<%= form_with model: @post do |form| %>
+  <label for="Title">Title:</label><br><br>
+  <%= form.text_field :title %><br><br><br>
+  <label for="Text">Write your thoughts here:</label><br><br>
+  <%= form.text_area :body %>
+  <%= form.submit "Create" %>
+<% end %>
+
+<%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
